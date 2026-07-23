@@ -1,0 +1,18 @@
+# Ignore uploads and local files
+uploads/
+*.sql
+/vendor/
+.env
+/includes/db.php
+/.vscode/
+/node_modules/
+.DS_Store
+
+# OS files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Logs
+*.log
+

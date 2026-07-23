@@ -1,0 +1,694 @@
+/* ===== Global Styles ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+    color: #2c3e50;
+}
+
+/* ===== Admin Dashboard Styles ===== */
+
+.topbar {
+    background: #1e293b;
+    color: #fff;
+    padding: 20px 30px;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #2563eb;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.btn-secondary {
+    background: #64748b;
+}
+
+.btn-secondary:hover {
+    background: #475569;
+}
+
+.btn-danger {
+    background: #dc2626;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+}
+
+.section-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+thead {
+    background: #f1f5f9;
+}
+
+th {
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #475569;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: #f8fafc;
+}
+
+td img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #94a3b8;
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* ===== Admin Login Page ===== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+.login-card {
+    background: #fff;
+    padding: 42px 36px;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #e2e8f0;
+}
+
+.login-card h2 {
+    margin: 0 0 10px 0;
+    text-align: center;
+    color: #1d4ed8;
+    font-size: 26px;
+}
+
+.login-card p {
+    text-align: center;
+    color: #64748b;
+    margin: 0 0 24px 0;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.login-card input,
+.login-card textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background: #f8fafc;
+}
+
+.login-card input:focus,
+.login-card textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.btn-full {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-full:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.error-message,
+.success-message {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.error-message {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.success-message {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.auth-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+.booking-house {
+    text-align: center;
+    color: #1d4ed8;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.form-container {
+    max-width: 740px;
+    margin: 30px auto;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.form-container input,
+.form-container textarea,
+.form-container button {
+    width: 100%;
+}
+
+.form-container input,
+.form-container textarea {
+    padding: 14px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #f8fafc;
+    outline: none;
+}
+
+.form-container textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.form-grid.form-grid-3 {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+}
+
+@media (max-width: 720px) {
+    .form-grid.form-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-container button {
+    max-width: 240px;
+    align-self: flex-start;
+}
+
+/* ===== Public Site: Navbar ===== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e293b;
+    padding: 18px 40px;
+}
+
+.nav-brand {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #fff;
+}
+
+/* ===== Hero Section ===== */
+
+.hero {
+    background: linear-gradient(135deg, #1e293b 0%, #2563eb 100%);
+    padding: 90px 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin: 0 0 12px 0;
+}
+
+.hero-content p {
+    font-size: 17px;
+    margin: 0 0 28px 0;
+    color: #dbeafe;
+}
+
+.btn-hero {
+    background: #fff;
+    color: #2563eb;
+    padding: 14px 30px;
+    font-size: 15px;
+}
+
+.btn-hero:hover {
+    background: #f1f5f9;
+}
+
+/* ===== Page Header (Houses listing page) ===== */
+
+.page-header {
+    text-align: center;
+    padding: 50px 20px 20px;
+}
+
+.page-header h1 {
+    margin: 0 0 8px 0;
+    color: #1e293b;
+}
+
+.page-header p {
+    color: #64748b;
+    margin: 0;
+}
+
+/* ===== Featured / House Grid ===== */
+
+.featured {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.search-panel {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+}
+
+.search-panel input {
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    min-width: 220px;
+    outline: none;
+}
+
+.search-panel input:focus {
+    border-color: #2563eb;
+}
+
+.section-title.center {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.house-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.house-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.house-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.house-image {
+    width: 100%;
+    height: 190px;
+    background: #e2e8f0;
+}
+
+.house-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.house-info {
+    padding: 20px;
+}
+
+.house-info h3 {
+    margin: 0 0 8px 0;
+    color: #1e293b;
+    font-size: 18px;
+}
+
+.house-location {
+    margin: 0 0 6px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.house-meta {
+    margin: 0 0 12px 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.house-price {
+    margin: 0 0 16px 0;
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.house-price.large {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.image-upload-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin: 18px 0;
+}
+
+.image-upload-item {
+    background: #fff;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.image-upload-item label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.image-upload-item input[type="file"],
+.image-upload-item input[type="text"] {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* Calendar styles (light overrides; main inline styles in calendar.php) */
+.calendar a { color: #2563eb; text-decoration:none; font-weight:600; }
+.calendar a:hover { text-decoration:underline; }
+
+/* Admin calendar booking items */
+.booking-item { display:block; padding:6px 8px; margin-bottom:6px; border-radius:8px; font-size:13px; }
+.booking-item.approved { background:#fee2e2; color:#b91c1c; }
+.booking-item.pending { background:#fff7ed; color:#92400e; border:1px solid #f1e0cc; }
+.booking-actions a { margin-right:6px; font-size:12px; }
+
+.details-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 30px 0 0;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    padding: 12px 14px;
+    margin: 0;
+    font-size: 14px;
+    color: #475569;
+}
+
+/* ===== House Details Page ===== */
+
+.details-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.details-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.details-image {
+    width: 100%;
+    height: 360px;
+    background: #e2e8f0;
+}
+
+.details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.details-info {
+    padding: 30px;
+}
+
+.details-info h1 {
+    margin: 0 0 10px 0;
+    color: #1e293b;
+    font-size: 28px;
+}
+
+/* ===== Contact Section ===== */
+.contact-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 20px 70px;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    color: #fff;
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 18px 45px rgba(37, 99, 235, 0.2);
+}
+
+.contact-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+
+.contact-card p {
+    margin: 0 0 18px 0;
+    color: #dbeafe;
+}
+
+.contact-details {
+    margin: 24px 0;
+}
+
+.contact-details p {
+    margin: 6px 0;
+    color: #eff6ff;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    background: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 22px;
+    font-size: 14px;
+}
+
+/* ===== Register Page: Role Selector ===== */
+
+.role-selector {
+    display: flex;
+    gap: 12px;
+    margin: 4px 0 4px;
+}
+
+.role-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #475569;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.role-option input {
+    accent-color: #2563eb;
+}
+
+.role-option:has(input:checked) {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.success-message {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+    

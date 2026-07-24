@@ -59,17 +59,28 @@ if ($user && (password_verify($password, $user['password']) || $password === $us
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<nav class="navbar">
+    <div class="nav-brand">House Rental</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" hidden>
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">☰</label>
+    <div class="nav-links">
+        <a href="index.php">Home</a>
+        <a href="houses.php">Houses</a>
+        <a href="index.php#contact">Contact</a>
+        <a href="register.php">Register</a>
+    </div>
+</nav>
 <div class="login-page">
     <div class="login-card">
-        <h2>Login</h2>
-        <p>Welcome back! Sign in to continue.</p>
+        <h2>welcome back</h2>
+        <p>Sign in below to manage your bookings and find the best rental homes.</p>
         <?php if (!empty($message)) { echo '<div class="error-message">' . htmlspecialchars($message) . '</div>'; } ?>
         <form method="POST">
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button class="btn btn-full" name="login">Login</button>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <button class="btn btn-full" name="login">log in</button>
         </form>
-        <p class="auth-link"><a href="register.php">Create an account</a></p>
+        <p class="auth-link">Don&#8217;t have an account? <a href="register.php">Create one now</a></p>
     </div>
 </div>
 </body>

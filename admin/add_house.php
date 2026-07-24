@@ -23,6 +23,11 @@ if (isset($_POST['submit'])) {
     if (mysqli_query($conn, $sql)) {
         $houseId = mysqli_insert_id($conn);
 
+        $uploadDir = __DIR__ . '/../uploads/';
+        if (!is_dir($uploadDir)) {
+            @mkdir($uploadDir, 0755, true);
+        }
+
         for ($i = 0; $i < count($images['name']); $i++) {
             if (empty($images['name'][$i])) {
                 continue;
@@ -32,7 +37,7 @@ if (isset($_POST['submit'])) {
             $tmpImage = $images['tmp_name'][$i];
             $caption = isset($captions[$i]) ? mysqli_real_escape_string($conn, trim($captions[$i])) : '';
 
-            if (move_uploaded_file($tmpImage, "../uploads/" . $imageName)) {
+            if (move_uploaded_file($tmpImage, $uploadDir . $imageName)) {
                 mysqli_query($conn, "INSERT INTO house_images (house_id, image, caption) VALUES ($houseId, '$imageName', '$caption')");
             }
         }
@@ -47,6 +52,8 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add House</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>

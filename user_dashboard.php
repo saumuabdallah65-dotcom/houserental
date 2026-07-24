@@ -29,11 +29,10 @@ $result = mysqli_query($conn, $query);
 <html>
 
 <head>
-
-<title>User Dashboard</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 
@@ -41,10 +40,10 @@ $result = mysqli_query($conn, $query);
 
 
 <nav class="navbar">
-
-<div class="nav-brand">House Rental</div>
-<div class="nav-links"><a href="logout.php">Logout</a></div>
-
+    <div class="nav-brand">House Rental</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" hidden>
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">☰</label>
+    <div class="nav-links"><a href="logout.php">Logout</a></div>
 </nav>
 
 

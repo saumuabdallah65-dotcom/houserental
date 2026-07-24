@@ -20,7 +20,7 @@ if ($booking_id > 0) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -32,6 +32,23 @@ if ($booking_id > 0) {
     </style>
 </head>
 <body>
+<nav class="navbar">
+    <div class="nav-brand">House Rental</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" hidden>
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">☰</label>
+    <div class="nav-links">
+        <a href="index.php">Home</a>
+        <a href="houses.php">Houses</a>
+        <a href="index.php#contact">Contact</a>
+        <?php if (isset($_SESSION['user'])) { ?>
+            <a href="user_dashboard.php">Dashboard</a>
+            <a href="logout.php">Logout</a>
+        <?php } else { ?>
+            <a href="login.php">Login</a>
+            <a href="register.php">Register</a>
+        <?php } ?>
+    </div>
+</nav>
 <div class="confirmation-card">
     <h2>Booking Submitted</h2>
     <?php if (!empty($notificationMsg)) { ?>

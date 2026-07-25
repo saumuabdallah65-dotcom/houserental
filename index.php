@@ -17,7 +17,7 @@ $result = mysqli_query($conn, $query);
 <body>
 <nav class="navbar">
     <div class="nav-brand">House Rental</div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" hidden>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" >
     <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">☰</label>
     <div class="nav-links">
         <a href="index.php" class="active">Home</a>
